@@ -16,7 +16,7 @@ const anotherId = Symbol("123")
 
 const bigNumber = 3471849381048024n
 
-console.log(typeof bigNumber);
+// console.log(typeof bigNumber);
 
 
 
@@ -35,7 +35,24 @@ const myFunction = () => {
   
 }
 
-console.log(typeof heros); // object
-console.log(typeof obj);  // object
-console.log(typeof myFunction);  // function but we called object function
+// console.log(typeof heros); // object
+// console.log(typeof obj);  // object
+// console.log(typeof myFunction);  // function but we called object function
 
+// ++++++++++++++++++++++++++++++++++++++++
+
+// Stack (Primitive), Heap (Non Primitive)
+
+let myName = "Pravin"
+let anotherName = "Hello"
+
+// console.log(anotherName);
+// console.log(myName);
+// primitive types
+//  Stored in stack
+// passed o assigned by value (call by value)
+// changes to copies dont affect original .
+
+// Non Primitive Type
+// Stored in heap : access via refrences (Stored in stack)
+// Changing the value through another refrence affects the original
