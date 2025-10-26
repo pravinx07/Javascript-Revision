@@ -70,15 +70,52 @@ const users = [
 
 // users[1].email
 
-console.log(tinderUser);
+// console.log(tinderUser);
 
 // return all keys of object but in array  
-console.log(Object.keys(tinderUser));
+// console.log(Object.keys(tinderUser));
 
 // return all values of object but in array  
-console.log(Object.values(tinderUser));
+// console.log(Object.values(tinderUser));
 
-console.log(Object.entries(tinderUser));
+// console.log(Object.entries(tinderUser));
 
 
-console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+// console.log(tinderUser.hasOwnProperty("isLoggedIn"));
+
+
+// *****************************************
+
+const course = {
+    courseName:"js wiith hindi",
+    price :"1222",
+    courseInstructor:"Pravin"
+}
+
+
+const {courseInstructor : instructor} = course
+
+console.log(instructor);
+
+
+// in react 
+// const navBar = ({company}) => {
+ 
+// }
+
+// navBar(company="pravin")
+
+
+// {
+//     "name":"Pravin",
+//     "age":23,
+//     "eail":"pravin@gmial.com"
+// }
+
+
+[
+    {},
+    {},
+    {}
+]
+
