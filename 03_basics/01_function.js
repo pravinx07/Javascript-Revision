@@ -38,4 +38,43 @@ function loginUserMessage(name = "Ajay"){ // default parameter
 loginUserMessage("Pravin") // print nothing
 // console.log(loginUserMessage("Pravin"));
 // console.log(loginUserMessage(""));
-console.log(loginUserMessage());
+// console.log(loginUserMessage());
+
+
+
+
+
+function calculateCartPrice(val1, val2, ...num1){  // spread operator give array of mutliple values
+    return num1
+}
+
+// console.log(calculateCartPrice(399, 300, 200, 32,1,441));
+// val1 = 399
+// val2 = 300
+// ...num => rest values
+
+const user = {
+    name:"Pravin",
+    price:400
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.name} and price is ${anyObject.price}`);
+    
+}
+
+// handleObject(user)
+handleObject({
+      name:"Pravin",
+    price:400
+})
+
+let arr = [1,2,3,4,5]
+function returnSecondArray(getArray){
+    return getArray[1]
+}
+
+console.log(returnSecondArray(arr));
+
+console.log(returnSecondArray([5,4,3,2,1]));
+
