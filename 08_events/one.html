@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <h1 class="id" id="hello">Hello</h1>
+  
+    <ul id="list">
+        <li id="one">one</li>
+        <li id="two">two</li>
+        <li id="three">three</li>
+        <li id="four">four</li>
+        <!-- <li></li> -->
+        <a id="google" href="https://www.google.com/">Google</a>
+    </ul>
+    <script >
+        // document.getElementById("list").addEventListener("click",(e)=>{
+        // //  console.log(e);
+        // console.log("Clicked inside the list ");
+        // e.stopPropagation()
+        
+        //  alert("hello cliked")
+         
+        // },false)
+
+
+        // document.getElementById("two").addEventListener("click",(e)=>{
+        // //  console.log(e);
+        // console.log("two clicked");
+        // // e.stopPropagation()
+        
+        // //  alert("hello cliked")
+         
+        // })
+
+
+        // type , timestamp, defaultPrevented 
+        // target , toElement , srcElement, CurrentTarget
+        // clientX, clientY, ScreenX, ScreenY
+        // altkey , ctrlKey, shiftKey, keyCode
+        // pageX, pageY
+
+        // event propagation 
+        // event bubbling and  event capturing
+
+        // event bubbling means niche se uper event jata hai means child se parant in above we click on two so two will get clicked first then its parant list will get clicked
+
+        // capturing event means parant se niche event jata hai
+        // pahle parants click hota hai then child click hota hai
+        // Clicked inside the list 
+        // one.html:29 two clicked
+
+
+         // e.stopPropagation() // stop event bubbling so niche se upper nahi jata
+         //  and vise versa for capturing 
+
+
+        //  document.getElementById("google").addEventListener("click",(e)=>{
+        //     // e.preventDefault()
+        //     e.preventDefault()  // stop default behaviour
+        //     e.stopPropagation()
+        //     console.log("click on google");
+            
+        //  }, false)
+
+
+        document.querySelector("#list").addEventListener("click",(e)=>{
+            // console.log(e.target.parentNode);
+            console.log(e.target.tagName);
+            
+            if(e.target.tagName === "LI"){
+                console.log(e.target.id);
+                
+
+                let remoteIt = e.target.parentNode
+            remoteIt.remove()
+            }
+            
+            // remoteIt.parentNode.removeChild(remoteIt)
+
+            
+        })
+
+    </script>
+</body>
+</html>
