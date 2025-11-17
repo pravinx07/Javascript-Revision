@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Project</title>
+  </head>
+  <body>
+    <h1>Hey There</h1>
+    <button id="stop">Stop</button>
+  </body>
+  <script>
+    const sayPravin = () => {
+      console.log("Pravin Shegamwar");
+    };
+    // setTimeout(sayPravin(),2000) // immediat execute
+    // setTimeout(sayPravin,2000) // execute after time
+
+    const changeText = function () {
+      document.querySelector("h1").innerHTML = "Mastering Js ";
+    };
+
+
+
+   const changeMe =  setTimeout(changeText, 2000);
+    // setInterval(()=>{
+    //     console.log("hey Thereeee");
+
+    // }, 2000)
+
+    // clearTimeout(changeMe)
+  
+    // stop changing text after cliking button
+    document.querySelector("#stop").addEventListener("click", () => {
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+        
+    })
+
+    
+  </script>
+</html>
